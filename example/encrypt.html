@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>encrypt带密钥的加解密</title>
+</head>
+<body>
+	<div>对字符进行加解密：字符不能有汉字</div>
+</body>
+<script type="text/javascript" src="../src/js/encrypt.js"></script>
+
+<script type="text/javascript">
+	var a = '123456';
+	var b = 'aaaaa';
+	var c = Encrypt.encrypt(a,b);
+	console.log('加密前：' + a);
+	console.log('加密后：' + c);
+	var d = Encrypt.decrypt(c,b);
+	console.log('解密后：' + d);
+</script>
+</html>

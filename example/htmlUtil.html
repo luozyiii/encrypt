@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML的编解码(HtmlUtil)</title>
+</head>
+<body>
+    
+<script src="../src/js/HtmlUtil.js"></script>
+<script type="text/javascript">
+
+    // 用浏览器内部转换器实现html编解码
+    var html = "<br>aaaaaa<p>bbbb</p>";
+    var encodeHtml = HtmlUtil.encode(html);
+    console.log("encodeHtml：" + encodeHtml);
+    var decodeHtml = HtmlUtil.decode(encodeHtml);
+    console.log("decodeHtml：" + decodeHtml);
+
+    // 用正则表达式进行转换处理
+    var html = "<br>ccccc<p>aaaaa</p>";
+    var encodeHTML = HtmlUtil.encodeByRegExp(html);
+    console.log("用正则表达式进行html转码，encodeHTML：" + encodeHTML);
+    var decodeHTML = HtmlUtil.decodeByRegExp("用正则表达式进行html解码：" + encodeHTML);
+    console.log(decodeHTML);
+    
+</script>
+</body>
+</html>

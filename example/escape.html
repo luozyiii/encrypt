@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript的escape()函数</title>
+</head>
+<body>
+	有一种加密的办法是采用javascript的escape()函数，把某些符号、汉字等变成乱码，以达到迷惑人的目的。解密这种代码的办法是采用其反函数加以还原。
+</body>
+<script>
+	var a = '<div>hello world!</div>';
+	console.log('加密前:' + a)
+	var b = escape(a);
+	console.log('escape加密后:' + b);
+	c = unescape(b);
+	c = c.toString();
+	console.log( 'unescape解密后:' + c);
+</script>
+</html>
